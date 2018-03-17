@@ -49,7 +49,7 @@ func main() {
 
 		for _, item := range quotes.Data {
 			dateString := fmt.Sprintf("%v", item[0])
-			closeString := fmt.Sprintf("%v", item[4])
+			closeString := fmt.Sprintf("%v", item[11])
 			if data[dateString] == nil {
 				data[dateString] = map[string]string{}
 			}
