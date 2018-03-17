@@ -21,6 +21,11 @@ type message struct {
 
 func main() {
 	startDate, err := time.Parse("2006-01-02", os.Getenv("START_DATE"))
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	endDate, err := time.Parse("2006-01-02", os.Getenv("END_DATE"))
 	if err != nil {
 		fmt.Println(err)
